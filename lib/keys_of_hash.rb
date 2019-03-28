@@ -3,12 +3,10 @@ class Hash
     # code goes here
     array = []
     self.each do |key, value|
-      arguments.each do |type|
-        if type == value
-          array.push(key)
-        end
+      if arguments.include?(value)
+        array << key
       end
     end
+    array
   end
-  array
 end
